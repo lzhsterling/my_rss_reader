@@ -293,7 +293,7 @@ def main():
     re_result = re.findall(mail_re, new_read_me)
 
     try:
-        send_mail(email_list, f"My-Rss-Reader每日速递（{datetime.today().strftime('%Y-%m-%d')}）", re_result)
+        send_mail(lzhnb808@outlook.com, f"My-Rss-Reader每日速递（{datetime.today().strftime('%Y-%m-%d')}）", re_result)
     except Exception as e:
         print("==邮件设信息置错误===》》", e)
 
