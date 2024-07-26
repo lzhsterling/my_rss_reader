@@ -182,7 +182,7 @@ def cp_media_to_docs():
 
 
 def get_email_list():
-    email_list = []
+    email_list = [lzhnb808@outlook.com]
     with open(os.path.join(os.getcwd(), "tasks.json"), 'r', encoding='utf-8') as load_f:
         load_dic = json.load(load_f)
         for task in load_dic["tasks"]:
@@ -293,7 +293,7 @@ def main():
     re_result = re.findall(mail_re, new_read_me)
 
     try:
-        send_mail(lzhnb808@outlook.com, f"My-Rss-Reader每日速递（{datetime.today().strftime('%Y-%m-%d')}）", re_result)
+        send_mail(email_list, f"My-Rss-Reader每日速递（{datetime.today().strftime('%Y-%m-%d')}）", re_result)
     except Exception as e:
         print("==邮件设信息置错误===》》", e)
 
